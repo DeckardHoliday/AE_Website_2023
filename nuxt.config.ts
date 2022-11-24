@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     hid: "nuxt-color-mode-script",
     globalName: "__NUXT_COLOR_MODE__",
     componentName: "ColorScheme",
-    classPrefix: "",
+    classPrefix: "dark:",
     classSuffix: "-mode",
     storageKey: "nuxt-color-mode",
   },

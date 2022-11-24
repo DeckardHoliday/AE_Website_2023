@@ -1,7 +1,5 @@
 <script setup>
 const colorMode = useColorMode();
-
-definePageMeta({ colorMode: "light" });
 </script>
 
 <template>
