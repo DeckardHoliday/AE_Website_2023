@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-slate-100 dark:bg-slate-900 min-h-screen">
+  <div class="bg-slate-100 dark:bg-stone-900 min-h-screen">
     <Header />
     <RouterView />
     <Footer />
