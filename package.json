@@ -13,6 +13,8 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
     "flowbite": "^1.5.4"
   }
 }

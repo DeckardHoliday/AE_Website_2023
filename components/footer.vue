@@ -1,11 +1,11 @@
 <template>
   <footer
-    class="fixed bottom-0 left-0 right-0 p-4 bg-white sm:p-6 dark:bg-gray-900"
+    class="fixed bottom-0 left-0 right-0 p-4 bg-white sm:p-6 dark:bg-stone-900"
   >
     <div
       class="container px-3 mx-auto sm:flex sm:items-center sm:justify-between"
     >
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      <span class="text-sm text-gray-500 sm:text-center dark:text-slate-100"
         >© 2022
         <a href="https://flowbite.com/" class="hover:underline">AudioELk</a>.
         All Rights Reserved.

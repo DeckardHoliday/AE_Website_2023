@@ -1,5 +1,8 @@
 <script setup>
-const colorMode = useColorMode();
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
 </script>
 
 <template>
