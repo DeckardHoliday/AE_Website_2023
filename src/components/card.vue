@@ -1,8 +1,4 @@
-<script>
-import { FilmIcon } from "@vue-hero-icons/outline";
-import { AdjustmentsIcon } from "@vue-hero-icons/outline";
-import { MusicNoteIcon } from "@vue-hero-icons/outline";
-</script>
+<script></script>
 
 <template>
   <div
