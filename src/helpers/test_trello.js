@@ -1,5 +1,7 @@
 import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-dotenv.config();
+dotenv.config({
+  path: "../../.env",
+});
 import Trello from "trello";
 const id = process.env.TRELLO_BOARD;
 const list_id = process.env.TRELLO_LIST;
