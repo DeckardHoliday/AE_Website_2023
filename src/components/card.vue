@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div
-    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-neutral-900 dark:border-stone-700 mx-2"
+    class="hover:scale-105 transition max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-neutral-900 dark:border-stone-700 mx-2"
   >
     <div
       class="flex justify-center items-center my-10 text-neutral-900 dark:text-slate-100"

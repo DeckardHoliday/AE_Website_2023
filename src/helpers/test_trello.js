@@ -17,10 +17,24 @@ const lists = await trello.getListsOnBoard(id);
 
 console.log(lists);
 
-trello.addCard("Spruce Art", card_text, list_id, function (error, trelloCard) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Card Added");
-  }
-});
+export async function submit_form(form_content = {}) {
+  let commissioner_name;
+  let submission_date = new Date();
+  let comm_type;
+  let comm_link;
+
+  await trello.addCard(
+    "Spruce Art",
+    card_text,
+    list_id,
+    function (error, trelloCard) {
+      if (error) {
+        console.log(error);
+        return false;
+      } else {
+        console.log("Card Added");
+        return true;
+      }
+    }
+  );
+}
