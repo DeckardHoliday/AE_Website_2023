@@ -12,7 +12,7 @@ export default {
 
 <template>
   <div
-    class="hover:scale-105 transition max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-neutral-900 dark:border-stone-700 mx-2"
+    class="hover:scale-105 transition max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-black dark:border-black mx-2"
   >
     <div
       class="flex justify-center items-center my-10 text-neutral-900 dark:text-slate-100"
@@ -38,7 +38,7 @@ export default {
       </p>
       <router-link
         :to="link_to"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-black dark:focus:ring-blue-800"
       >
         Learn More
         <svg

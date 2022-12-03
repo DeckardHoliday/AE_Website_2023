@@ -3,9 +3,33 @@ import Carousel from "../components/carousel.vue";
 import Card from "../components/card.vue";
 
 // import icons for card props
-import film_svg from "../assets/heroicons/24/solid/film.svg";
-import mix_svg from "../assets/heroicons/24/solid/adjustments-vertical.svg";
-import game_svg from "../assets/heroicons/24/solid/computer-desktop.svg";
+import light_film_svg from "../assets/heroicons/light/film.svg";
+import light_mix_svg from "../assets/heroicons/light/adjustments-vertical.svg";
+import light_game_svg from "../assets/heroicons/light/computer-desktop.svg";
+
+import dark_film_svg from "../assets/heroicons/dark/film.svg";
+import dark_mix_svg from "../assets/heroicons/dark/adjustments-vertical.svg";
+import dark_game_svg from "../assets/heroicons/dark/computer-desktop.svg";
+
+import { useDark } from "@vueuse/core";
+
+const isDark = useDark();
+
+let film_svg;
+let mix_svg;
+let game_svg;
+
+console.log(isDark.value);
+
+if (isDark.value) {
+  film_svg = dark_film_svg;
+  mix_svg = dark_mix_svg;
+  game_svg = dark_game_svg;
+} else {
+  film_svg = light_film_svg;
+  mix_svg = light_mix_svg;
+  game_svg = light_game_svg;
+}
 
 export default {
   components: {
