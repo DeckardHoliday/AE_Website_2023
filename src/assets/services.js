@@ -1,7 +1,7 @@
 export const post_services = [
   {
     // Standard Tier
-    title: Standard,
+    title: "Standard",
     price: 35,
     per: "15 Seconds",
     features: [
@@ -32,7 +32,7 @@ export const post_services = [
     ],
   },
   {
-    title: Premium,
+    title: "Premium",
     price: 50,
     per: "15 Seconds",
     features: [
