@@ -119,7 +119,6 @@ export const editing_services = [
       },
     ],
   },
-  {},
 ];
 
 export const music_services = [
