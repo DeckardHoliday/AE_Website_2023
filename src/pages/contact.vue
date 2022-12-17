@@ -16,6 +16,7 @@ import cohost_dark from "../assets/icons/dark/cohost_light.svg";
 import furaffinity_dark from "../assets/icons/dark/furaffinity_light.svg";
 import twitter_dark from "../assets/icons/dark/twitter_light.svg";
 import itaku_dark from "../assets/icons/dark/itaku_light.svg";
+import PageTitle from "../components/pagetitle.vue";
 
 let cohost_icon;
 let furaffinity_icon;
@@ -45,29 +46,16 @@ export default {
   },
   components: {
     ContactForm,
+    PageTitle,
   },
 };
 </script>
 
 <template>
   <section>
-    <div id="contact_title" class="my-16">
-      <h1
-        class="text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-      >
-        Contact
-      </h1>
-      <p
-        class="mx-64 mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-      >
-        Praesent sodales eros nibh, interdum tempor nibh accumsan ac. Vestibulum
-        nec purus nisl. Vestibulum at ultricies nisl. Vivamus vel odio justo.
-        Aliquam cursus convallis odio, ut egestas urna. Sed ornare sollicitudin
-        mauris in interdum.
-      </p>
-    </div>
+    <PageTitle title="Contact" />
 
-    <div id="contact_options" class="flex justify-center mx-48">
+    <div id="contact_options" class="flex justify-center mx-64">
       <div id="contact_form" class="flex-1">
         <ContactForm />
       </div>
