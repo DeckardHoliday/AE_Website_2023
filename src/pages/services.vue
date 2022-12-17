@@ -1,5 +1,7 @@
 <script>
 import PriceCard from "../components/priceCard.vue";
+import SectionTitle from "../components/sectiontitle.vue";
+import PageTitle from "../components/pagetitle.vue";
 
 import {
   post_services,
@@ -17,34 +19,24 @@ export default {
   },
   components: {
     PriceCard,
+    SectionTitle,
+    PageTitle,
   },
 };
 </script>
 
 <template>
   <section>
-    <h4
-      class="text-center my-7 mb-32 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-    >
-      Pricing
-    </h4>
+    <PageTitle title="Pricing" />
 
     <div class="text-white text-xl">
       <div id="post-audio" class="my-24">
-        <h1
-          class="text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-        >
-          Post Production Audio
-        </h1>
-        <p
-          class="mx-32 mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-        >
-          Probably what I'm most known for! If you have a film or animation that
-          you need sound design, editing, and mixing for I've got some options
-          for you!
-        </p>
+        <SectionTitle
+          title="Post Production Audio"
+          description="Probably what I'm most known for! Whether you need foley work for a film project or a full sound design pass on your animation, I wll work with you to bring any video project you have to life!"
+        />
 
-        <ul class="flex justify-center align-center">
+        <ul class="flex justify-center align-center flex-wrap">
           <li
             class="flex mx-8"
             v-for="service in post_items"
@@ -61,20 +53,12 @@ export default {
       </div>
 
       <div id="audio-editing" class="my-24">
-        <h1
-          class="text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-        >
-          Editing and Restoration
-        </h1>
-        <p
-          class="mx-32 mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-        >
-          Probably what I'm most known for! If you have a film or animation that
-          you need sound design, editing, and mixing for I've got some options
-          for you!
-        </p>
+        <SectionTitle
+          title="Dialogue Editing and Restoration"
+          description="Have a recording you need cleaned up? Need your narration or podcast recordings to flow better? I provide spectral repair services along with dialogue editing services that will clean up noise in your recording and fix the pacing of your dialogue!"
+        />
         <!-- -->
-        <ul class="flex justify-center align-center">
+        <ul class="flex justify-center align-center flex-wrap">
           <li
             class="flex mx-8"
             v-for="service in editing_items"
@@ -91,19 +75,11 @@ export default {
       </div>
 
       <div id="music-editing" class="my-24">
-        <h1
-          class="text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-        >
-          Music Mixing and Mastering
-        </h1>
-        <p
-          class="mx-32 mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-        >
-          Probably what I'm most known for! If you have a film or animation that
-          you need sound design, editing, and mixing for I've got some options
-          for you!
-        </p>
-        <ul class="flex justify-center align-center">
+        <SectionTitle
+          title="Music Mixing and Mastering"
+          description="In addition to my Post Audio services, I also offer music mixing and mastering services! If you have a track or album that needs mixing feel free to reach out!"
+        />
+        <ul class="flex justify-center align-center flex-wrap">
           <li
             class="flex mx-8"
             v-for="service in music_items"
@@ -120,18 +96,10 @@ export default {
       </div>
 
       <div id="game-audio">
-        <h1
-          class="text-center mb-4 text-3xl font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl lg:text-5xl dark:text-white"
-        >
-          Game Audio
-        </h1>
-        <p
-          class="mx-32 mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
-        >
-          Probably what I'm most known for! If you have a film or animation that
-          you need sound design, editing, and mixing for I've got some options
-          for you!
-        </p>
+        <SectionTitle
+          title="Game Audio"
+          description="From custom sound design to full audio playback implementation, I provide a wide variety of services across multiple tech stacks including RenPy, Unreal Engine, and Unity!"
+        />
       </div>
     </div>
   </section>
