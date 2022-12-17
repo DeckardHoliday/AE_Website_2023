@@ -69,10 +69,10 @@ export default {
           <a class="flex-0 m-3" href="#">
             <img :src="cohost_icon" />
           </a>
-          <a class="flex-0 m-3" href="#"> <img src="{{cohost_icon}}" /> </a>
-          <a class="flex-0 m-3" href="#"> <img src="{{cohost_icon}}" /> </a>
-          <a class="flex-0 m-3" href="#"> <img src="{{cohost_icon}}" /> </a>
-          <a class="flex-0 m-3" href="#"> <img src="cohost{{_icon" /> </a>
+          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
+          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
+          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
+          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
         </div>
       </div>
     </div>
