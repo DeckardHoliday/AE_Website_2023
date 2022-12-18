@@ -4,6 +4,7 @@ export const post_services = [
     title: "Standard",
     price: 35,
     per: "15 Seconds",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,
@@ -35,6 +36,7 @@ export const post_services = [
     title: "Premium",
     price: 50,
     per: "15 Seconds",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,
@@ -69,6 +71,7 @@ export const editing_services = [
     title: "Cleanup and Restoration",
     price: 50,
     per: "15 Minutes",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,
@@ -96,6 +99,7 @@ export const editing_services = [
     title: "Podcast Editing and Mixing",
     price: 100,
     per: "Hour",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,
@@ -126,6 +130,7 @@ export const music_services = [
     title: "Music Mixing",
     price: 150,
     per: "Song",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,
@@ -149,6 +154,7 @@ export const music_services = [
     title: "Music Mastering",
     price: 150,
     per: "Song",
+    modaltoopen: "post-audio-modal",
     features: [
       {
         included: true,

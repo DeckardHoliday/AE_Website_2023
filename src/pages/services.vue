@@ -40,12 +40,13 @@ export default {
           <li
             class="flex mx-8"
             v-for="service in post_items"
-            :key="service.title"
+            :key="'post_' + post_items.indexOf(service)"
           >
             <PriceCard
               :title="service.title"
               :price="service.price"
               :per="service.per"
+              :modaltoopen="service.modaltoopen"
               :features="service.features"
             />
           </li>
@@ -62,12 +63,13 @@ export default {
           <li
             class="flex mx-8"
             v-for="service in editing_items"
-            :key="service.title"
+            :key="'editing_' + post_items.indexOf(service)"
           >
             <PriceCard
               :title="service.title"
               :price="service.price"
               :per="service.per"
+              :modaltoopen="service.modaltoopen"
               :features="service.features"
             />
           </li>
@@ -83,12 +85,13 @@ export default {
           <li
             class="flex mx-8"
             v-for="service in music_items"
-            :key="service.title"
+            :key="'music_' + post_items.indexOf(service)"
           >
             <PriceCard
               :title="service.title"
               :price="service.price"
               :per="service.per"
+              :modaltoopen="service.modaltoopen"
               :features="service.features"
             />
           </li>
