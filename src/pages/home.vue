@@ -11,6 +11,9 @@ import dark_film_svg from "../assets/icons/dark/film.svg";
 import dark_mix_svg from "../assets/icons/dark/adjustments-vertical.svg";
 import dark_game_svg from "../assets/icons/dark/computer-desktop.svg";
 
+import deer_purple from "../assets/logos/Audio_Elk_2022_Deer_Purple.png";
+import deer_white from "../assets/logos/Audio_Elk_2022_Deer_White.png";
+
 import { useDark } from "@vueuse/core";
 
 const isDark = useDark();
@@ -18,6 +21,7 @@ const isDark = useDark();
 let film_svg;
 let mix_svg;
 let game_svg;
+let deer_icon;
 
 console.log(isDark.value);
 
@@ -25,10 +29,12 @@ if (isDark.value) {
   film_svg = dark_film_svg;
   mix_svg = dark_mix_svg;
   game_svg = dark_game_svg;
+  deer_icon = deer_white;
 } else {
   film_svg = light_film_svg;
   mix_svg = light_mix_svg;
   game_svg = light_game_svg;
+  deer_icon = deer_purple;
 }
 
 export default {
@@ -41,6 +47,7 @@ export default {
       film_svg,
       mix_svg,
       game_svg,
+      deer_icon,
     };
   },
 };
@@ -51,7 +58,9 @@ export default {
     <Carousel />
   </section>
   <section class="flex my-32 container content-center justify-center mx-auto">
-    <div class="flex-1 mx-5 flex text-stone-900 dark:text-slate-100">
+    <div
+      class="flex-1 mx-5 flex text-stone-900 dark:text-slate-100 items-center"
+    >
       <div class="flex-1">
         <h2 class="text-4xl mb-5 ml-12 text-stone-900 dark:text-slate-100">
           Welcome to Audio Elk
@@ -65,7 +74,9 @@ export default {
           there!
         </p>
       </div>
-      <div class="flex-1"><img src="../assets/logos/AE_Stack_purp.png" /></div>
+      <div class="flex-1 p-16">
+        <img :src="deer_icon" alt="deer head logo" />
+      </div>
     </div>
   </section>
   <section class="container grid sm:grid-cols-1 md:grid-cols-3 mx-auto">
