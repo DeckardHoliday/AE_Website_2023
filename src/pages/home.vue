@@ -23,8 +23,6 @@ let mix_svg;
 let game_svg;
 let deer_icon;
 
-console.log(isDark.value);
-
 if (isDark.value) {
   film_svg = dark_film_svg;
   mix_svg = dark_mix_svg;

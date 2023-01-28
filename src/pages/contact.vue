@@ -66,13 +66,10 @@ export default {
           Reach out on Social Media
         </h1>
         <div class="flex justify-center mx-auto text-center">
-          <a class="flex-0 m-3" href="#">
-            <img :src="cohost_icon" />
-          </a>
-          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
-          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
-          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
-          <a class="flex-0 m-3" href="#"> <img :src="{ cohost_icon }" /> </a>
+          <img class="flex-0 m-3 w-12" :src="cohost_icon" />
+          <img class="flex-0 m-3 w-12" :src="furaffinity_icon" />
+          <img class="flex-0 m-3 w-12" :src="twitter_icon" />
+          <img class="flex-0 m-3 w-12" :src="itaku_icon" />
         </div>
       </div>
     </div>
