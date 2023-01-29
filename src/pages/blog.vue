@@ -1,6 +1,7 @@
 <script>
+import ActiveBlog from "../components/blog/activeBlog.vue";
+import RecentBlogCard from "../components/blog/recentBlogCard.vue";
 import PageTitle from "../components/pagetitle.vue";
-import RecentBlogCard from "../components/recentBlogCard.vue";
 import SectionTitle from "../components/sectiontitle.vue";
 
 const res = await fetch(
@@ -24,6 +25,7 @@ export default {
     PageTitle,
     SectionTitle,
     RecentBlogCard,
+    ActiveBlog,
   },
   data() {
     return {
@@ -63,7 +65,7 @@ export default {
         {{ new Date(latest_blog.published).toDateString() }}
       </h5>
       <hr class="mb-5" />
-      <div v-html="latest_blog.content"></div>
+      <active-blog :content="latest_blog.content" />
       <h5
         class="text-right md:text-right lg:text-left mb-8 text-xs font-normal leading-none text-gray-900 md:text-4xl lg:text-lg dark:text-white"
       >

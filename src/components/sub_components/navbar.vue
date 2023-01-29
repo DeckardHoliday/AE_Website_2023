@@ -1,8 +1,10 @@
-<script setup>
+<script>
 import { useColorMode } from "@vueuse/core";
 
 import purple_logo from "../../assets/logos/Audio_Elk_2022_Final_Purple.png";
 import white_logo from "../../assets/logos/Audio_Elk_2022_Final_White.png";
+
+import { useRoute } from "vue-router";
 
 var colorMode = String(useColorMode()._value);
 
@@ -11,6 +13,28 @@ let img_src = purple_logo;
 if (colorMode === "dark") {
   img_src = white_logo;
 }
+
+export default {
+  computed: {
+    route: () => useRoute(),
+  },
+  methods: {
+    get_classes(route_match) {
+      const route = useRoute();
+
+      if (route.path === route_match) {
+        return "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 dark:text-white";
+      } else {
+        return "block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
+      }
+    },
+  },
+  data() {
+    return {
+      img_src,
+    };
+  },
+};
 </script>
 
 <template>
@@ -48,24 +72,17 @@ if (colorMode === "dark") {
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-black dark:border-gray-700"
         >
           <li>
-            <router-link
-              to="/"
-              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 dark:text-white"
-              aria-current="page"
+            <router-link to="/" :class="get_classes('/')" aria-current="page"
               >Home</router-link
             >
           </li>
           <li>
-            <router-link
-              to="/about"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <router-link to="/about" :class="get_classes('/about')"
               >About</router-link
             >
           </li>
           <li>
-            <router-link
-              to="/blog"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <router-link to="/blog" :class="get_classes('/blog')"
               >Blog</router-link
             >
           </li>
@@ -82,23 +99,17 @@ if (colorMode === "dark") {
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-black md:dark:bg-black dark:border-gray-700"
         >
           <li>
-            <router-link
-              to="/portfolio"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <router-link to="/portfolio" :class="get_classes('/portfolio')"
               >Portfolio</router-link
             >
           </li>
           <li>
-            <router-link
-              to="/services"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <router-link to="/services" :class="get_classes('/services')"
               >Services</router-link
             >
           </li>
           <li>
-            <router-link
-              to="/contact"
-              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            <router-link to="/contact" :class="get_classes('/contact')"
               >Contact</router-link
             >
           </li>
