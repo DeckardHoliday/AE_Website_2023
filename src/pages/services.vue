@@ -3,6 +3,9 @@ import PriceCard from "../components/priceCard.vue";
 import SectionTitle from "../components/sectiontitle.vue";
 import PageTitle from "../components/pagetitle.vue";
 
+//modals
+import PostAudioModal from "../components/modals/postaudiomodal.vue";
+
 import {
   post_services,
   editing_services,
@@ -21,6 +24,7 @@ export default {
     PriceCard,
     SectionTitle,
     PageTitle,
+    PostAudioModal,
   },
 };
 </script>
@@ -97,7 +101,6 @@ export default {
           </li>
         </ul>
       </div>
-
       <div id="game-audio">
         <SectionTitle
           title="Game Audio"
@@ -106,4 +109,6 @@ export default {
       </div>
     </div>
   </section>
+
+  <PostAudioModal id="post-audio-modal" />
 </template>

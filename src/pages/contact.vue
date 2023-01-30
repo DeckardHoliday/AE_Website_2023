@@ -1,5 +1,6 @@
 <script>
 import ContactForm from "../components/sub_components/ContactForm.vue";
+import socialBar from "../components/socialBar.vue";
 
 import { useDark, useToggle } from "@vueuse/core";
 
@@ -47,6 +48,7 @@ export default {
   components: {
     ContactForm,
     PageTitle,
+    socialBar,
   },
 };
 </script>
@@ -65,12 +67,10 @@ export default {
         >
           Reach out on Social Media
         </h1>
-        <div class="flex justify-center mx-auto text-center">
-          <img class="flex-0 m-3 w-12" :src="cohost_icon" />
-          <img class="flex-0 m-3 w-12" :src="furaffinity_icon" />
-          <img class="flex-0 m-3 w-12" :src="twitter_icon" />
-          <img class="flex-0 m-3 w-12" :src="itaku_icon" />
-        </div>
+        <socialBar
+          text_size="text-4xl"
+          text_color="text-black dark:text-white"
+        />
       </div>
     </div>
   </section>

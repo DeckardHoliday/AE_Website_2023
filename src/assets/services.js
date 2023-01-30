@@ -24,11 +24,11 @@ export const post_services = [
       },
       {
         included: false,
-        description: "High complex scenes not included",
+        description: "Complex Scenes Excluded",
       },
       {
         included: false,
-        description: "3 Character Limit",
+        description: "2 Character Limit",
       },
     ],
   },
@@ -87,11 +87,11 @@ export const editing_services = [
       },
       {
         included: false,
-        description: "Pace editing",
+        description: "Pace editing excluded",
       },
       {
         included: false,
-        description: "Mixing and mastering",
+        description: "Mixing and mastering excluded",
       },
     ],
   },
