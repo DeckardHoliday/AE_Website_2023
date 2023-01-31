@@ -3,16 +3,19 @@ import ActiveBlog from "../components/blog/activeBlog.vue";
 import RecentBlogCard from "../components/blog/recentBlogCard.vue";
 import PageTitle from "../components/pagetitle.vue";
 import SectionTitle from "../components/sectiontitle.vue";
-
+/*
 const res = await fetch(
   `https://www.googleapis.com/blogger/v3/blogs/4667748673448071263/posts?key=${
     import.meta.env.VITE_BLOGGER_API_KEY
   }`
 );
-
 const blog_data = await res.json();
 
 const blog_items = blog_data.items;
+*/
+
+const blog_data = "";
+const blog_items = [];
 
 const latest_blog = blog_items[0];
 const recent_posts = blog_items;

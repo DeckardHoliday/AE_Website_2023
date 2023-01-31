@@ -2,6 +2,7 @@
   "name": "ae-website-2023",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://development.audioelk.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
