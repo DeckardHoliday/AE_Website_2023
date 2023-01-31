@@ -1,3 +1,12 @@
+<script setup>
+import { onMounted } from "vue";
+import { initModals } from "flowbite";
+
+onMounted(() => {
+  initModals();
+});
+</script>
+
 <script>
 import PriceCard from "../components/priceCard.vue";
 import SectionTitle from "../components/sectiontitle.vue";
@@ -110,5 +119,5 @@ export default {
     </div>
   </section>
 
-  <PostAudioModal id="post-audio-modal" />
+  <PostAudioModal />
 </template>
