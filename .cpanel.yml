@@ -1,4 +1,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/audioelk/development.audioelk.com/
-    - cp -a /dist/. $DEPLOYPATH
+    - /dist $DEPLOYPATH
