@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  #mobile ul {
+    @apply bg-white dark:bg-black text-black dark:text-white p-1 my-2 mx-1;
+  }
+
+  #mobile ul li {
+    @apply bg-white dark:bg-black text-black dark:text-white py-1 px-0 border-none;
+  }
+
+  .mobile_active {
+    @apply bg-purple-900 text-white font-bold dark:bg-gray-600 text-white font-bold p-0;
+  }
+}
