@@ -1,10 +1,14 @@
 <script>
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+import modal_tos from "./comm_modal_sections/comm_modal_tos.vue";
+import modal_comm_type from "./comm_modal_sections/comm_modal_select_comm_type.vue";
 
 export default {
   components: {
     FontAwesomeIcon,
+    modal_tos,
+    modal_comm_type,
   },
   data() {
     return {
@@ -19,11 +23,11 @@ export default {
   <div
     id="post-audio-modal"
     aria-hidden="true"
-    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+    class="fixed top-0 left-0 right-0 bg-black dark:bg-black bg-opacity-20 dark:bg-opacity-20 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
   >
     <div class="relative w-full h-full max-w-2xl md:h-auto">
       <!-- Modal content -->
-      <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <div class="relative bg-white rounded-lg shadow dark:bg-stone-900">
         <!-- Modal header -->
         <div
           class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600"
@@ -41,27 +45,8 @@ export default {
         </div>
         <!-- Modal body -->
         <div class="p-6 space-y-6">
-          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-200">
-            <b>IMPORTANT READ FIRST:</b> This form is to be used if you wish to
-            commission me for <b>AUDIO</b> related work.
-            <b
-              >I DO NOT ANIMATE AND DO NOT ACCEPT COMMISSION REQUESTS TO CREATE
-              ANY ANIMATIONS. I ONLY OFFER AUDIO RELATED SERVICES.</b
-            >
-          </p>
-          <hr />
-          <p class="text-base leading-relaxed text-gray-500 dark:text-gray-200">
-            Please be sure to read my
-            <a
-              href="https://docs.google.com/document/d/1Qnp9gcymLHt3evYffWZYabZvxaGHCZalijfcOQXYh7E/edit?usp=sharing"
-              target="_blank"
-              class="text-white underline"
-              >terms and conditions</a
-            >
-            before submitting a form, as you are required to agree to them
-            before moving forward! If you have any questions regarding my ToS
-            please feel free to message me and I will be glad to answer them.
-          </p>
+          <modal_tos />
+          <modal_comm_type />
         </div>
         <!-- Modal footer -->
         <div

@@ -13,7 +13,7 @@ import SectionTitle from "../components/sectiontitle.vue";
 import PageTitle from "../components/pagetitle.vue";
 
 //modals
-import PostAudioModal from "../components/modals/postaudiomodal.vue";
+import PostAudioModal from "../components/modals/comm_modal.vue";
 
 import {
   post_services,
