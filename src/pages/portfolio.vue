@@ -12,4 +12,6 @@ export default {
 
 <template>
   <PageTitle title="Portfolio" />
+  <SectionTitle title="My Work" />
+  <SectionTitle title="Credits" />
 </template>

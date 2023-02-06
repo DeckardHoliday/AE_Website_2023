@@ -102,7 +102,7 @@ export default {
         </ul>
       </div>
     </div>
-    <div class="sm:visible md:invisible">
+    <div class="sm:visible md:invisible md:hidden">
       <Navbar class="bg-white text-black dark:bg-black dark:text-white">
         <template #default="{ isShowMenu }">
           <router-link to="/" class="absolute top-5 left-36">
