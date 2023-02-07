@@ -3,12 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import modal_tos from "./comm_modal_sections/comm_modal_tos.vue";
 import modal_comm_type from "./comm_modal_sections/comm_modal_select_comm_type.vue";
+import comm_modal_post_game_form from "./comm_modal_sections/comm_modal_post_game_form.vue";
 
 export default {
   components: {
     FontAwesomeIcon,
     modal_tos,
     modal_comm_type,
+    comm_modal_post_game_form,
   },
   data() {
     return {
@@ -45,8 +47,7 @@ export default {
         </div>
         <!-- Modal body -->
         <div class="p-6 space-y-6">
-          <modal_tos />
-          <modal_comm_type />
+          <comm_modal_post_game_form />
         </div>
         <!-- Modal footer -->
         <div
