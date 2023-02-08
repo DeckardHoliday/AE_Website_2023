@@ -8,6 +8,16 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
+const form_data = {
+  comm_type: "",
+  name: "",
+  preferred_contact_username: "",
+  preferred_contact_method: "",
+  email: "",
+  tier: "",
+  source: "",
+};
+
 export default {
   components: {
     FontAwesomeIcon,
@@ -17,10 +27,7 @@ export default {
     return {
       faUser,
       comm_type: "post",
-      form_data: {
-        comm_type: "post",
-        project_name: "",
-      },
+      form_data,
     };
   },
 };
@@ -36,26 +43,105 @@ export default {
   <hr />
   <div>
     <div>
-      <label class="text-black dark:text-white font-bold" for="comm_type"
-        >Commission Type:
-      </label>
-      <select name="comm_type" class="w-48" :required="true">
-        <option :selected="true" value="post">Post Audio</option>
-        <option value="game">Game Audio</option>
-      </select>
-      <div class="grid columns-2 gap-4">
-        <Input
-          class="my-2 p-1 text-xl text-black dark:text-white"
-          placeholder="Username"
-        />
-        <Input class="my-2 p-1 text-xl" placeholder="Username" />
+      <div class="flex items-center">
+        <label
+          class="flex-1 text-2xl text-black dark:text-white font-bold"
+          for="comm_type"
+          >Commission Type:
+        </label>
+        <div
+          class="flex-1 flex justify-center items-center text-black dark:text-white font-bold"
+        >
+          <input
+            class="bg-white border-black dark:bg-stone-900 dark:border-white mx-5"
+            type="radio"
+            id="post_audio_radio"
+            name="comm_type"
+            value="Post Audio"
+            v-model="form_data.comm_type"
+          />
+          <label class="text-xl m-0 p-0" for="post_audio_radio"
+            >Post Audio</label
+          >
+        </div>
+        <div
+          class="flex-1 flex justify-center items-center text-black dark:text-white font-bold"
+        >
+          <input
+            class="bg-white border-black dark:bg-stone-900 dark:border-white mx-5"
+            type="radio"
+            id="game_audio_radio"
+            name="comm_type"
+            value="Game Audio"
+            v-model="form_data.comm_type"
+          />
+          <label class="text-xl m-0 p-0" for="game_audio_radio"
+            >Game Audio</label
+          >
+        </div>
+      </div>
+      <div class="flex justify-center items-center m-5">
+        <div class="flex flex-wrap m-0 p-0 col-auto">
+          <label
+            class="w-full text-lg font-bold text-black dark:text-white"
+            for="name"
+            >Name</label
+          >
+          <input
+            class="h-10 p-2 rounded bg-white dark:bg-stone-900 text-black dark:text-white"
+            type="text"
+            name="username"
+            v-model="form_data.name"
+          />
+        </div>
+        <div class="flex flex-wrap m-0 p-0 col-auto">
+          <label
+            class="w-full text-lg font-bold text-black dark:text-white"
+            for="email"
+            >Email</label
+          >
+          <input
+            class="h-10 p-2 rounded bg-white dark:bg-stone-900 text-black dark:text-white"
+            type="text"
+            name="email"
+            v-model="form_data.email"
+          />
+        </div>
+      </div>
+      <div class="flex justify-center items-center m-5">
+        <div class="flex flex-wrap m-0 p-0 col-auto">
+          <label
+            class="w-full text-lg font-bold text-black dark:text-white"
+            for="name"
+            >Preferred Contact</label
+          >
+          <input
+            class="h-10 p-2 rounded bg-white dark:bg-stone-900 text-black dark:text-white"
+            type="text"
+            name="username"
+            v-model="form_data.name"
+          />
+        </div>
+        <div class="flex flex-wrap m-0 p-0 col-auto">
+          <label
+            class="w-full text-lg font-bold text-black dark:text-white"
+            for="email"
+            >Email</label
+          >
+          <input
+            class="h-10 p-2 rounded bg-white dark:bg-stone-900 text-black dark:text-white"
+            type="text"
+            name="email"
+            v-model="form_data.email"
+          />
+        </div>
       </div>
     </div>
     <hr />
-    <div v-if="comm_type === 'post'">
+    <div v-if="form_data.comm_type === 'Post Audio'">
       <h1 class="text-4xl font-bold text-white">POST AUDIO SHOWING</h1>
     </div>
-    <div v-if="comm_type === 'game'">
+    <div v-else-if="form_data.comm_type === 'Game Audio'">
       <h1 class="text-4xl font-bold text-white">game AUDIO SHOWING</h1>
     </div>
   </div>
