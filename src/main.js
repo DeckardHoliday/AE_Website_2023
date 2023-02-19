@@ -9,6 +9,7 @@ import "./style.css";
 import HomePage from "./pages/home.vue";
 import AboutPage from "./pages/about.vue";
 import BlogPage from "./pages/blog.vue";
+import StorePage from "./pages/store.vue";
 import PortfolioPage from "./pages/portfolio.vue";
 import ServicesPage from "./pages/services.vue";
 import ContactPage from "./pages/contact.vue";
@@ -18,6 +19,7 @@ const routes = [
   { path: "/", component: HomePage },
   { path: "/about", component: AboutPage },
   { path: "/blog", component: BlogPage },
+  { path: "/store", component: StorePage },
   { path: "/portfolio", component: PortfolioPage },
   { path: "/services", component: ServicesPage },
   { path: "/contact", component: ContactPage },

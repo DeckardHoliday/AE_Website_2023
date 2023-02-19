@@ -5,9 +5,7 @@ import PageTitle from "../components/pagetitle.vue";
 import SectionTitle from "../components/sectiontitle.vue";
 /*
 const res = await fetch(
-  `https://www.googleapis.com/blogger/v3/blogs/4667748673448071263/posts?key=${
-    import.meta.env.VITE_BLOGGER_API_KEY
-  }`
+ 
 );
 const blog_data = await res.json();
 

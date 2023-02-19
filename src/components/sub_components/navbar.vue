@@ -58,18 +58,21 @@ export default {
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-black dark:border-gray-700"
         >
           <li>
-            <router-link to="/" :class="get_classes('/')" aria-current="page"
-              >Home</router-link
-            >
-          </li>
-          <li>
-            <router-link to="/about" :class="get_classes('/about')"
+            <router-link
+              to="/about"
+              :class="get_classes('/about')"
+              aria-current="page"
               >About</router-link
             >
           </li>
           <li>
             <router-link to="/blog" :class="get_classes('/blog')"
               >Blog</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/portfolio" :class="get_classes('/portfolio')"
+              >Portfolio</router-link
             >
           </li>
         </ul>
@@ -85,8 +88,8 @@ export default {
           class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-black md:dark:bg-black dark:border-gray-700"
         >
           <li>
-            <router-link to="/portfolio" :class="get_classes('/portfolio')"
-              >Portfolio</router-link
+            <router-link to="/store" :class="get_classes('/store')"
+              >Store</router-link
             >
           </li>
           <li>

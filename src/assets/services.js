@@ -4,6 +4,7 @@ export const post_services = [
     title: "Standard",
     price: 35,
     per: "15 Seconds",
+    disclaimer: "2 Minute Length Limit",
     modaltoopen: "post-audio-modal",
     features: [
       {
@@ -36,6 +37,7 @@ export const post_services = [
     title: "Premium",
     price: 50,
     per: "15 Seconds",
+    disclaimer: "2 Minute Length Limit",
     modaltoopen: "post-audio-modal",
     features: [
       {
@@ -56,11 +58,44 @@ export const post_services = [
       },
       {
         included: true,
-        description: "Includes complex scenes",
+        description: "Includes some complex scenes",
+      },
+      {
+        included: false,
+        description: "Four character limit",
+      },
+    ],
+  },
+  {
+    title: "Pro",
+    price: 250,
+    per: "Starting",
+    disclaimer: "No Length Limit",
+    modaltoopen: "post-audio-modal",
+    features: [
+      {
+        included: true,
+        description: "5 Revisions",
+      },
+      {
+        included: true,
+        description: "Custom foley and design work",
+      },
+      {
+        included: true,
+        description: "1080p, 720p MP4 Exports",
+      },
+      {
+        included: true,
+        description: "24 bit/48 kHz WAV export",
       },
       {
         included: true,
         description: "No character limit",
+      },
+      {
+        included: true,
+        description: "Price Negotiated",
       },
     ],
   },
@@ -70,7 +105,7 @@ export const editing_services = [
   {
     title: "Cleanup and Restoration",
     price: 50,
-    per: "15 Minutes",
+    per: "15 Minutes of audio",
     modaltoopen: "post-audio-modal",
     features: [
       {
@@ -98,7 +133,7 @@ export const editing_services = [
   {
     title: "Podcast Editing and Mixing",
     price: 100,
-    per: "Hour",
+    per: "Hour of audio",
     modaltoopen: "post-audio-modal",
     features: [
       {

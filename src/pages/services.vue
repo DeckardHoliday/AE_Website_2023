@@ -61,6 +61,7 @@ export default {
               :per="service.per"
               :modaltoopen="service.modaltoopen"
               :features="service.features"
+              :disclaimer="service.disclaimer ? service.disclaimer : ''"
             />
           </li>
         </ul>
@@ -84,6 +85,7 @@ export default {
               :per="service.per"
               :modaltoopen="service.modaltoopen"
               :features="service.features"
+              :disclaimer="service.disclaimer ? service.disclaimer : ''"
             />
           </li>
         </ul>
@@ -106,6 +108,7 @@ export default {
               :per="service.per"
               :modaltoopen="service.modaltoopen"
               :features="service.features"
+              :disclaimer="service.disclaimer ? service.disclaimer : ''"
             />
           </li>
         </ul>

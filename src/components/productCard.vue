@@ -6,20 +6,17 @@ import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 export default {
   props: {
     title: String,
+    tagline: String,
+    description: String,
     price: Number,
-    per: String,
-    disclaimer: String,
-    modaltoopen: String,
-    features: { type: Array, required: true },
+    url: String,
+    image: String,
   },
   components: {
     FontAwesomeIcon,
   },
   data() {
-    return {
-      faCheck,
-      faXmark,
-    };
+    return {};
   },
 };
 </script>
