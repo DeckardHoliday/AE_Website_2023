@@ -3,7 +3,7 @@ import PageTitle from "../components/pagetitle.vue";
 import SectionTitle from "../components/sectiontitle.vue";
 
 import { about_me_txt_group, tools_of_the_trade } from "../assets/site_text";
-import deckard from "../assets/deckard_pics/Icon_gajardopaper.png";
+import deckard from "../assets/deckard_pics/rear.jpg";
 
 export default {
   components: {
