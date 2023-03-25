@@ -7,6 +7,7 @@ import "./style.css";
 
 // import pages
 import HomePage from "./pages/home.vue";
+import BlogPage from "./pages/blog.vue";
 import AboutPage from "./pages/about.vue";
 import StorePage from "./pages/store.vue";
 import PortfolioPage from "./pages/portfolio.vue";
@@ -16,6 +17,7 @@ import ContactPage from "./pages/contact.vue";
 // routes
 const routes = [
   { path: "/", component: HomePage },
+  { path: "/blog", component: BlogPage },
   { path: "/about", component: AboutPage },
   { path: "/store", component: StorePage },
   { path: "/portfolio", component: PortfolioPage },

@@ -28,19 +28,21 @@ export default {
 </script>
 
 <template>
-  <PageTitle title="Portfolio" />
+  <PageTitle title="Store" />
   <SectionTitle title="Sound Libraries" />
-  <div v-for="product in products">
-    <ProductCard
-      :key="`product_item_${products.indexOf(product)}`"
-      :img="product.cover_url"
-      :title="product.title"
-      :tagline="product.short_text"
-      :sale="product.sale ? product.sale : undefined"
-      :date_published="product.published_at"
-      :url="product.url"
-      :price="product.min_price"
-    />
-  </div>
-  <SectionTitle title="Development Tools" />
+  <section class="flex w-8/12 mx-auto flex-wrap justify-center items-center">
+    <div v-for="product in products">
+      <ProductCard
+        :key="`product_item_${products.indexOf(product)}`"
+        :img="product.cover_url"
+        :title="product.title"
+        :tagline="product.short_text"
+        :sale="product.sale ? product.sale : undefined"
+        :date_published="product.published_at"
+        :url="product.url"
+        :price="product.min_price"
+        :sale_price="parseInt(product.price * (product.sale.rate / 100))"
+      />
+    </div>
+  </section>
 </template>
