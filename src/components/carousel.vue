@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <div id="default-carousel" class="container mx-auto px-2">
+  <div id="default-carousel" class="mx-auto w-full px-2">
     <carousel
       :items-to-show="1"
       :loop="true"
@@ -32,16 +32,9 @@ export default {
       <slide :key="slide">
         <img src="../assets/placeholder_carousel_3.png" />
       </slide>
-
       <template #addons>
         <pagination />
       </template>
     </carousel>
   </div>
 </template>
-
-<style scoped>
-#default-carousel {
-  height: 75vh;
-}
-</style>

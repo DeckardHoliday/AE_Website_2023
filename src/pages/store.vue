@@ -7,8 +7,6 @@ import { itchio_data } from "../assets/products";
 
 const products = itchio_data.games;
 
-console.log(products);
-
 /*
 
 */
@@ -34,14 +32,7 @@ export default {
     <div v-for="product in products">
       <ProductCard
         :key="`product_item_${products.indexOf(product)}`"
-        :img="product.cover_url"
-        :title="product.title"
-        :tagline="product.short_text"
-        :sale="product.sale ? product.sale : undefined"
-        :date_published="product.published_at"
-        :url="product.url"
-        :price="product.min_price"
-        :sale_price="parseInt(product.price * (product.sale.rate / 100))"
+        :product="product"
       />
     </div>
   </section>

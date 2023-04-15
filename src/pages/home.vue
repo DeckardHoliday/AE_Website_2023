@@ -55,28 +55,6 @@ export default {
   <section>
     <Carousel />
   </section>
-  <section class="flex my-32 container content-center justify-center mx-auto">
-    <div
-      class="flex-1 mx-5 flex text-stone-900 dark:text-slate-100 items-center"
-    >
-      <div class="flex-1">
-        <h2 class="text-4xl mb-5 ml-12 text-stone-900 dark:text-slate-100">
-          Welcome to Audio Elk
-        </h2>
-        <p class="text-xl px-10 text-stone-900 dark:text-slate-100 ml-1">
-          Audio Elk is your one stop shop for all your potential audio needs!
-          Whether its custom sound design for a film or animation of yours, some
-          music or dialogue mixing for an album or podcast, or some custom sound
-          design and audio scripting for your game project, Audio Elk has a
-          variety of services to ensure that whatever you need, Audio Elk is
-          there!
-        </p>
-      </div>
-      <div class="flex-1 p-16">
-        <img :src="deer_icon" alt="deer head logo" />
-      </div>
-    </div>
-  </section>
   <section class="container grid sm:grid-cols-1 md:grid-cols-3 mx-auto">
     <Card
       class=""
@@ -102,5 +80,27 @@ export default {
       description="Bring your project to the next level with custom sound design, implementation, and audio systems programming."
       link_to="services"
     />
+  </section>
+  <section class="flex container content-center justify-center mx-auto">
+    <div
+      class="flex-1 mx-5 flex text-stone-900 dark:text-slate-100 items-center"
+    >
+      <div class="flex-1">
+        <h2 class="text-4xl mb-5 ml-12 text-stone-900 dark:text-slate-100">
+          Welcome to Audio Elk
+        </h2>
+        <p class="text-xl px-10 text-stone-900 dark:text-slate-100 ml-1">
+          Audio Elk is your one stop shop for all your potential audio needs!
+          Whether its custom sound design for a film or animation of yours, some
+          music or dialogue mixing for an album or podcast, or some custom sound
+          design and audio scripting for your game project, Audio Elk has a
+          variety of services to ensure that whatever you need, Audio Elk is
+          there!
+        </p>
+      </div>
+      <div class="flex-1 p-16">
+        <img :src="deer_icon" alt="deer head logo" />
+      </div>
+    </div>
   </section>
 </template>
